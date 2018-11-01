@@ -1,0 +1,93 @@
+<tbody><tr>
+                                        <td width="100">
+                                            Tên của bạn:(*)
+                                        </td>
+                                        <td width="400">
+                                            <input name="ctl00$ContentPlaceHolder1$txtHoten" type="text" id="ctl00_ContentPlaceHolder1_txtHoten" style="width:300px;"> 
+                                            <span id="ctl00_ContentPlaceHolder1_reqHoten" style="color: red; visibility: visible;">Họ tên!</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Địa chỉ:</td>
+                                        <td><input name="ctl00$ContentPlaceHolder1$txtDiaChi" type="text" id="ctl00_ContentPlaceHolder1_txtDiaChi" style="width:300px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone:</td>
+                                        <td><input name="ctl00$ContentPlaceHolder1$txtPhone" type="text" id="ctl00_ContentPlaceHolder1_txtPhone" style="width:300px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email:(*)</td>
+                                        <td>
+                                            <input name="ctl00$ContentPlaceHolder1$txtEmail" type="text" id="ctl00_ContentPlaceHolder1_txtEmail" style="width:300px;"> 
+                                            <span id="ctl00_ContentPlaceHolder1_reqEmail" style="color: red; visibility: visible;">Email!</span>
+                                            <br>
+                                            <span id="ctl00_ContentPlaceHolder1_RegEmail" style="color:Red;visibility:hidden;">Email không hợp lệ</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nội dung:(*) </td>
+                                        <td>
+                                            <textarea name="ctl00$ContentPlaceHolder1$txtNoiDung" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_txtNoiDung" style="height:100px;width:300px;"></textarea>
+                                            <span id="ctl00_ContentPlaceHolder1_reqNoiDung" style="color: red; visibility: visible;">Nội dung!</span>
+                                            <br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnSend" value="Gửi thông điệp" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSend&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnSend">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <span id="ctl00_ContentPlaceHolder1_lblMailStatus"></span>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody> 
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ContentPlaceHolder1_reqHoten = document.all ? document.all["ctl00_ContentPlaceHolder1_reqHoten"] : document.getElementById("ctl00_ContentPlaceHolder1_reqHoten");
+ctl00_ContentPlaceHolder1_reqHoten.controltovalidate = "ctl00_ContentPlaceHolder1_txtHoten";
+ctl00_ContentPlaceHolder1_reqHoten.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_reqHoten.initialvalue = "";
+var ctl00_ContentPlaceHolder1_reqEmail = document.all ? document.all["ctl00_ContentPlaceHolder1_reqEmail"] : document.getElementById("ctl00_ContentPlaceHolder1_reqEmail");
+ctl00_ContentPlaceHolder1_reqEmail.controltovalidate = "ctl00_ContentPlaceHolder1_txtEmail";
+ctl00_ContentPlaceHolder1_reqEmail.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_reqEmail.initialvalue = "";
+var ctl00_ContentPlaceHolder1_RegEmail = document.all ? document.all["ctl00_ContentPlaceHolder1_RegEmail"] : document.getElementById("ctl00_ContentPlaceHolder1_RegEmail");
+ctl00_ContentPlaceHolder1_RegEmail.controltovalidate = "ctl00_ContentPlaceHolder1_txtEmail";
+ctl00_ContentPlaceHolder1_RegEmail.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_RegEmail.validationexpression = "^[\\w-]+(\\+[\\w-]*)?@([\\w-]+\\.)+[\\w-]+$";
+var ctl00_ContentPlaceHolder1_reqNoiDung = document.all ? document.all["ctl00_ContentPlaceHolder1_reqNoiDung"] : document.getElementById("ctl00_ContentPlaceHolder1_reqNoiDung");
+ctl00_ContentPlaceHolder1_reqNoiDung.controltovalidate = "ctl00_ContentPlaceHolder1_txtNoiDung";
+ctl00_ContentPlaceHolder1_reqNoiDung.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_reqNoiDung.initialvalue = "";
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_ContentPlaceHolder1_reqHoten"), document.getElementById("ctl00_ContentPlaceHolder1_reqEmail"), document.getElementById("ctl00_ContentPlaceHolder1_RegEmail"), document.getElementById("ctl00_ContentPlaceHolder1_reqNoiDung"));
+//]]>
+</script>
+<script type="text/javascript">
+
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+
+</script>
